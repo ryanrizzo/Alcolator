@@ -26,7 +26,7 @@
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="VhF-kA-Mdv">
                                 <rect key="frame" x="18" y="65" width="564" height="31"/>
                             </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="???" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zMe-Ij-gFQ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="???" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zMe-Ij-gFQ">
                                 <rect key="frame" x="288" y="166" width="25" height="49"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -53,6 +53,7 @@
                             <constraint firstItem="zMe-Ij-gFQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="268" id="hUE-ge-PRF"/>
                             <constraint firstItem="GNj-IQ-t5R" firstAttribute="top" secondItem="VhF-kA-Mdv" secondAttribute="bottom" constant="8" id="jor-zW-AhV"/>
                             <constraint firstItem="GNj-IQ-t5R" firstAttribute="top" secondItem="VhF-kA-Mdv" secondAttribute="bottom" constant="16" id="kix-dy-MpD"/>
+                            <constraint firstItem="zMe-Ij-gFQ" firstAttribute="width" secondItem="GNj-IQ-t5R" secondAttribute="width" id="mZm-V1-dVf"/>
                             <constraint firstItem="zMe-Ij-gFQ" firstAttribute="top" secondItem="GNj-IQ-t5R" secondAttribute="bottom" constant="87" id="nky-RV-Lng"/>
                             <constraint firstAttribute="trailingMargin" secondItem="6ma-lO-aGT" secondAttribute="trailing" id="q8C-6w-tc7"/>
                             <constraint firstAttribute="leadingMargin" secondItem="6ma-lO-aGT" secondAttribute="leading" id="raX-5Y-kbl"/>
@@ -65,7 +66,9 @@
                                 <exclude reference="xIR-Kc-RzM"/>
                                 <exclude reference="9dU-n4-6G2"/>
                                 <exclude reference="H6B-cH-OUl"/>
+                                <exclude reference="IJn-9n-cUw"/>
                                 <exclude reference="XAC-IC-jYi"/>
+                                <exclude reference="hUE-ge-PRF"/>
                                 <exclude reference="nky-RV-Lng"/>
                             </mask>
                         </variation>
