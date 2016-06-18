@@ -28,8 +28,8 @@ class WhiskeyViewController: ViewController {
         let numberOfWhiskeyGlassesForEquivalentAlcoholAmount = ouncesOfAlcoholTotal / ouncesOfAlcoholPerWhiskeyGlass;
         
         var beerText = String()
-        
-        if (numberOfBeers == 1) {
+        let wholeBeer = Int(numberOfBeers)
+        if (wholeBeer == 1) {
             beerText = NSLocalizedString("beer", comment: "singular beer");
         } else {
             beerText = NSLocalizedString("beers", comment: "plural of beer");
@@ -42,7 +42,10 @@ class WhiskeyViewController: ViewController {
         } else {
             whiskeyText = NSLocalizedString("shots",  comment: "plural of shot");
         }
-        let resultText = "\(numberOfBeers) \(beerText) (with \((self.beerPercentTextField.text! as NSString).floatValue)% alcohol) contains as much alcohol as \(numberOfWhiskeyGlassesForEquivalentAlcoholAmount) \(whiskeyText) of whiskey."
+        
+        let wholeNumber = Int(numberOfWhiskeyGlassesForEquivalentAlcoholAmount)
+        
+        let resultText = "\(wholeBeer) \(beerText) (with \((self.beerPercentTextField.text! as NSString).floatValue)% alcohol) contains as much alcohol as \(wholeNumber) \(whiskeyText) of whiskey."
         self.resultLabel.text = resultText;
         
         
@@ -72,10 +75,12 @@ class WhiskeyViewController: ViewController {
         } else {
             whiskeyText = NSLocalizedString("shots",  comment: "plural of shot");
         }
-
+        
+        let wholeNumber = Int(numberOfWhiskeyGlassesForEquivalentAlcoholAmount)
+        
         self.navigationItem.title = "Whiskey (\(numberOfWhiskeyGlassesForEquivalentAlcoholAmount) \(whiskeyText))"
         
-        self.tabBarItem.badgeValue = "\(sender.value)"
+        self.tabBarItem.badgeValue = "\(wholeNumber)"
     }
     
     

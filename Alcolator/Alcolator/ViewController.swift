@@ -60,8 +60,11 @@ class ViewController: UIViewController {
             wineText = NSLocalizedString("glasses", comment: "plural of glass")
         }
         
-        self.navigationItem.title = "Wine (\(numberOfWineGlassesForEquivalentAlcoholAmount) \(wineText))"
-        self.tabBarItem.badgeValue = "\(sender.value)"
+        let wholeNumber = Int(numberOfWineGlassesForEquivalentAlcoholAmount)
+        
+        self.navigationItem.title = "Wine (\(wholeNumber) \(wineText))"
+        
+        self.tabBarItem.badgeValue = "\(wholeNumber)"
     }
     
     @IBAction func buttonPressed(sender: UIButton) {
@@ -82,23 +85,25 @@ class ViewController: UIViewController {
         let numberOfWineGlassesForEquivalentAlcoholAmount = ouncesOfAlcoholTotal / ouncesOfAlcoholPerWineGlass
         
         var beerText = String()
+        let wholeBeer = Int(numberOfBeers)
         
-        if (numberOfBeers == 1) {
+        if (wholeBeer == 1) {
             beerText = NSLocalizedString("beer", comment: "singular beer")
         } else {
             beerText = NSLocalizedString("beers", comment: "plural of beer")
         }
         
         var wineText = String()
+        let wholeWine = Int(numberOfWineGlassesForEquivalentAlcoholAmount)
         
-        if (numberOfWineGlassesForEquivalentAlcoholAmount == 1) {
+        if (wholeWine == 1) {
             wineText = NSLocalizedString("glass", comment: "singular glass")
         } else {
             wineText = NSLocalizedString("glasses", comment: "plural of glass")
         }
         
         //generate result text, display it on label
-        let resultText = "\(numberOfBeers) \(beerText) (with \((self.beerPercentTextField.text! as NSString).floatValue)% alcohol) contains as much alcohol as \(numberOfWineGlassesForEquivalentAlcoholAmount) \(wineText) of wine"
+        let resultText = "\(wholeBeer) \(beerText) (with \((self.beerPercentTextField.text! as NSString).floatValue)% alcohol) contains as much alcohol as \(wholeWine) \(wineText) of wine"
         self.resultLabel.text = resultText
     }
     
