@@ -75,6 +75,7 @@ class WhiskeyViewController: ViewController {
 
         self.navigationItem.title = "Whiskey (\(numberOfWhiskeyGlassesForEquivalentAlcoholAmount) \(whiskeyText))"
         
+        self.tabBarItem.badgeValue = "\(sender.value)"
     }
     
     

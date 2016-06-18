@@ -61,6 +61,7 @@ class ViewController: UIViewController {
         }
         
         self.navigationItem.title = "Wine (\(numberOfWineGlassesForEquivalentAlcoholAmount) \(wineText))"
+        self.tabBarItem.badgeValue = "\(sender.value)"
     }
     
     @IBAction func buttonPressed(sender: UIButton) {
