@@ -174,16 +174,16 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="r8R-uZ-zUK"/>
                                 <exclude reference="4SA-QB-dH9"/>
-                                <exclude reference="OMJ-Kb-6jd"/>
-                                <exclude reference="fXK-Fe-X5m"/>
+                                <exclude reference="r8R-uZ-zUK"/>
                                 <exclude reference="ACE-qS-Mzp"/>
-                                <exclude reference="JUE-mF-PDY"/>
-                                <exclude reference="XWr-ou-eRe"/>
                                 <exclude reference="FCg-nL-gdi"/>
                                 <exclude reference="HCC-lH-tLt"/>
                                 <exclude reference="HYQ-6m-y9l"/>
+                                <exclude reference="JUE-mF-PDY"/>
+                                <exclude reference="OMJ-Kb-6jd"/>
+                                <exclude reference="XWr-ou-eRe"/>
+                                <exclude reference="fXK-Fe-X5m"/>
                                 <exclude reference="ilf-a5-QED"/>
                             </mask>
                         </variation>
