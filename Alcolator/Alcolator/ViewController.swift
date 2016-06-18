@@ -36,7 +36,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var resultLabel: UILabel!
     
     @IBAction func sliderValueDidChange(sender: UISlider) {
-        print("Slider valie changed to \(sender.value)")
+        print("Slider value changed to \(sender.value)")
         self.beerPercentTextField.resignFirstResponder()
     }
     
@@ -74,7 +74,7 @@ class ViewController: UIViewController {
         }
         
         //generate result text, display it on label
-        let resultText = "\(numberOfBeers) \(beerText) (with \((self.beerPercentTextField.text! as NSString).floatValue)% alchol) contains as much alcohol as \(numberOfWineGlassesForEquivalentAlcoholAmount) \(wineText) of wine"
+        let resultText = "\(numberOfBeers) \(beerText) (with \((self.beerPercentTextField.text! as NSString).floatValue)% alcohol) contains as much alcohol as \(numberOfWineGlassesForEquivalentAlcoholAmount) \(wineText) of wine"
         self.resultLabel.text = resultText
     }
     

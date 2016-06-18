@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		15135A721D15A51C00F12EF5 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15135A711D15A51C00F12EF5 /* MainMenuViewController.swift */; };
 		15DCC0441D134BD000275EC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DCC0431D134BD000275EC7 /* AppDelegate.swift */; };
 		15DCC0461D134BD000275EC7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DCC0451D134BD000275EC7 /* ViewController.swift */; };
 		15DCC0491D134BD000275EC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15DCC0471D134BD000275EC7 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		15135A711D15A51C00F12EF5 /* MainMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainMenuViewController.swift; path = Alcolator/MainMenuViewController.swift; sourceTree = "<group>"; };
 		15DCC0401D134BD000275EC7 /* Alcolator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alcolator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15DCC0431D134BD000275EC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		15DCC0451D134BD000275EC7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -40,6 +42,7 @@
 		15DCC0371D134BD000275EC7 = {
 			isa = PBXGroup;
 			children = (
+				15135A711D15A51C00F12EF5 /* MainMenuViewController.swift */,
 				15DCC0421D134BD000275EC7 /* Alcolator */,
 				15DCC0411D134BD000275EC7 /* Products */,
 			);
@@ -139,6 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15135A721D15A51C00F12EF5 /* MainMenuViewController.swift in Sources */,
 				15DCC0561D14ECB600275EC7 /* WhiskeyViewController.swift in Sources */,
 				15DCC0461D134BD000275EC7 /* ViewController.swift in Sources */,
 				15DCC0441D134BD000275EC7 /* AppDelegate.swift in Sources */,
@@ -297,6 +301,7 @@
 				15DCC0541D134BD000275EC7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
