@@ -38,6 +38,29 @@ class ViewController: UIViewController {
     @IBAction func sliderValueDidChange(sender: UISlider) {
         print("Slider value changed to \(sender.value)")
         self.beerPercentTextField.resignFirstResponder()
+        
+        //calculate how much alcohol is in the beers
+        let numberOfBeers = self.beerCountSlider.value
+        let ouncesInOneBeerGlass = 12.floatValue
+        let alcoholPercentageOfBeer = (self.beerPercentTextField.text! as NSString).floatValue / 100
+        let ouncesOfAlcoholPerBeer = ouncesInOneBeerGlass * alcoholPercentageOfBeer
+        let ouncesOfAlcoholTotal = ouncesOfAlcoholPerBeer * numberOfBeers
+        
+        //wine equivalence calculations
+        let ouncesInOneWineGlass = 5.floatValue
+        let alcoholPercentageOfWine = 0.13.floatValue
+        let ouncesOfAlcoholPerWineGlass = ouncesInOneWineGlass * alcoholPercentageOfWine
+        let numberOfWineGlassesForEquivalentAlcoholAmount = ouncesOfAlcoholTotal / ouncesOfAlcoholPerWineGlass
+        
+        var wineText = String()
+        
+        if (numberOfWineGlassesForEquivalentAlcoholAmount == 1) {
+            wineText = NSLocalizedString("glass", comment: "singular glass")
+        } else {
+            wineText = NSLocalizedString("glasses", comment: "plural of glass")
+        }
+        
+        self.navigationItem.title = "Wine (\(numberOfWineGlassesForEquivalentAlcoholAmount) \(wineText))"
     }
     
     @IBAction func buttonPressed(sender: UIButton) {
