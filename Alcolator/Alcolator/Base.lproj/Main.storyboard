@@ -51,13 +51,16 @@
                                 </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="???" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zMe-Ij-gFQ">
-                                <rect key="frame" x="288" y="173" width="25" height="20.5"/>
+                                <rect key="frame" x="245" y="173" width="111" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GNj-IQ-t5R">
                                 <rect key="frame" x="245" y="111" width="111" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="111" id="khU-cd-8iz"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="25"/>
                                 <state key="normal" title="Calculate"/>
                                 <connections>
@@ -68,6 +71,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="zMe-Ij-gFQ" firstAttribute="width" secondItem="GNj-IQ-t5R" secondAttribute="width" id="6EK-UG-RPV"/>
                             <constraint firstItem="zMe-Ij-gFQ" firstAttribute="top" secondItem="GNj-IQ-t5R" secondAttribute="bottom" constant="29" id="9dU-n4-6G2"/>
                             <constraint firstAttribute="trailingMargin" secondItem="zMe-Ij-gFQ" secondAttribute="trailing" constant="267" id="9h6-gG-qXf"/>
                             <constraint firstItem="VhF-kA-Mdv" firstAttribute="top" secondItem="6ma-lO-aGT" secondAttribute="bottom" constant="15" id="Azf-sr-nWC"/>
