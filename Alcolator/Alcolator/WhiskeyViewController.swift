@@ -13,16 +13,16 @@ class WhiskeyViewController: ViewController {
     override func buttonPressed(sender: UIButton) {
         self.beerPercentTextField.resignFirstResponder()
         
-        let numberOfBeers = self.beerCountSlider.value
-        let ouncesInOneBeerGlass = 12.floatValue
+        let numberOfBeers = CGFloat(self.beerCountSlider.value)
+        let ouncesInOneBeerGlass: CGFloat = 12.0
         
-        let alcoholPercentageOfBeer = (self.beerPercentTextField.text! as NSString).floatValue / 100
+        let alcoholPercentageOfBeer = CGFloat((self.beerPercentTextField.text! as NSString).floatValue / 100)
         let ouncesOfAlcoholPerBeer = ouncesInOneBeerGlass * alcoholPercentageOfBeer
         
         let ouncesOfAlcoholTotal = ouncesOfAlcoholPerBeer * numberOfBeers;
         
-        let ouncesInOneWhiskeyGlass = 1.floatValue  // a 1oz shot
-        let alcoholPercentageOfWhiskey = 0.4.floatValue  // 40% is average
+        let ouncesInOneWhiskeyGlass: CGFloat = 1.0  // a 1oz shot
+        let alcoholPercentageOfWhiskey: CGFloat = 0.4  // 40% is average
         
         let ouncesOfAlcoholPerWhiskeyGlass = ouncesInOneWhiskeyGlass * alcoholPercentageOfWhiskey;
         let numberOfWhiskeyGlassesForEquivalentAlcoholAmount = ouncesOfAlcoholTotal / ouncesOfAlcoholPerWhiskeyGlass;
@@ -42,7 +42,7 @@ class WhiskeyViewController: ViewController {
         } else {
             whiskeyText = NSLocalizedString("shots",  comment: "plural of shot");
         }
-        let resultText = "\(numberOfBeers) \(beerText) (with \((self.beerPercentTextField.text! as NSString).floatValue)% alcohol) contains as much alcohol as \(numberOfWhiskeyGlassesForEquivalentAlcoholAmount) \(whiskeyText) of whiskey."
+        let resultText = "\(Int(numberOfBeers)) \(beerText) (with \((self.beerPercentTextField.text! as NSString).floatValue)% alcohol) contains as much alcohol as \(Int(numberOfWhiskeyGlassesForEquivalentAlcoholAmount)) \(whiskeyText) of whiskey."
         self.resultLabel.text = resultText;
         
         
@@ -51,16 +51,16 @@ class WhiskeyViewController: ViewController {
     override func sliderValueDidChange(sender: UISlider) {
         self.beerPercentTextField.resignFirstResponder()
         
-        let numberOfBeers = self.beerCountSlider.value
-        let ouncesInOneBeerGlass = 12.floatValue
+        let numberOfBeers = CGFloat(self.beerCountSlider.value)
+        let ouncesInOneBeerGlass: CGFloat = 12.0
         
-        let alcoholPercentageOfBeer = (self.beerPercentTextField.text! as NSString).floatValue / 100
+        let alcoholPercentageOfBeer = CGFloat((self.beerPercentTextField.text! as NSString).floatValue / 100)
         let ouncesOfAlcoholPerBeer = ouncesInOneBeerGlass * alcoholPercentageOfBeer
         
         let ouncesOfAlcoholTotal = ouncesOfAlcoholPerBeer * numberOfBeers;
         
-        let ouncesInOneWhiskeyGlass = 1.floatValue  // a 1oz shot
-        let alcoholPercentageOfWhiskey = 0.4.floatValue  // 40% is average
+        let ouncesInOneWhiskeyGlass: CGFloat = 1  // a 1oz shot
+        let alcoholPercentageOfWhiskey: CGFloat = 0.4  // 40% is average
         
         let ouncesOfAlcoholPerWhiskeyGlass = ouncesInOneWhiskeyGlass * alcoholPercentageOfWhiskey;
         let numberOfWhiskeyGlassesForEquivalentAlcoholAmount = ouncesOfAlcoholTotal / ouncesOfAlcoholPerWhiskeyGlass;
@@ -73,7 +73,7 @@ class WhiskeyViewController: ViewController {
             whiskeyText = NSLocalizedString("shots",  comment: "plural of shot");
         }
 
-        self.navigationItem.title = "Whiskey (\(numberOfWhiskeyGlassesForEquivalentAlcoholAmount) \(whiskeyText))"
+        self.navigationItem.title = "Whiskey (\(Int(numberOfWhiskeyGlassesForEquivalentAlcoholAmount)) \(whiskeyText))"
         
     }
     

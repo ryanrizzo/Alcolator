@@ -40,15 +40,15 @@ class ViewController: UIViewController {
         self.beerPercentTextField.resignFirstResponder()
         
         //calculate how much alcohol is in the beers
-        let numberOfBeers = self.beerCountSlider.value
-        let ouncesInOneBeerGlass = 12.floatValue
-        let alcoholPercentageOfBeer = (self.beerPercentTextField.text! as NSString).floatValue / 100
+        let numberOfBeers = CGFloat(self.beerCountSlider.value)
+        let ouncesInOneBeerGlass: CGFloat = 12
+        let alcoholPercentageOfBeer = CGFloat((self.beerPercentTextField.text! as NSString).floatValue / 100)
         let ouncesOfAlcoholPerBeer = ouncesInOneBeerGlass * alcoholPercentageOfBeer
         let ouncesOfAlcoholTotal = ouncesOfAlcoholPerBeer * numberOfBeers
         
         //wine equivalence calculations
-        let ouncesInOneWineGlass = 5.floatValue
-        let alcoholPercentageOfWine = 0.13.floatValue
+        let ouncesInOneWineGlass: CGFloat = 5.0
+        let alcoholPercentageOfWine: CGFloat = 0.13
         let ouncesOfAlcoholPerWineGlass = ouncesInOneWineGlass * alcoholPercentageOfWine
         let numberOfWineGlassesForEquivalentAlcoholAmount = ouncesOfAlcoholTotal / ouncesOfAlcoholPerWineGlass
         
@@ -60,7 +60,7 @@ class ViewController: UIViewController {
             wineText = NSLocalizedString("glasses", comment: "plural of glass")
         }
         
-        self.navigationItem.title = "Wine (\(numberOfWineGlassesForEquivalentAlcoholAmount) \(wineText))"
+        self.navigationItem.title = "Wine (\(Int(numberOfWineGlassesForEquivalentAlcoholAmount)) \(wineText))"
     }
     
     @IBAction func buttonPressed(sender: UIButton) {
@@ -68,15 +68,15 @@ class ViewController: UIViewController {
         self.beerPercentTextField.resignFirstResponder()
         
         //calculate how much alcohol is in the beers
-        let numberOfBeers = self.beerCountSlider.value
-        let ouncesInOneBeerGlass = 12.floatValue
-        let alcoholPercentageOfBeer = (self.beerPercentTextField.text! as NSString).floatValue / 100
+        let numberOfBeers = CGFloat(self.beerCountSlider.value)
+        let ouncesInOneBeerGlass: CGFloat = 12.0
+        let alcoholPercentageOfBeer = CGFloat((self.beerPercentTextField.text! as NSString).floatValue / 100)
         let ouncesOfAlcoholPerBeer = ouncesInOneBeerGlass * alcoholPercentageOfBeer
         let ouncesOfAlcoholTotal = ouncesOfAlcoholPerBeer * numberOfBeers
         
         //wine equivalence calculations
-        let ouncesInOneWineGlass = 5.floatValue
-        let alcoholPercentageOfWine = 0.13.floatValue
+        let ouncesInOneWineGlass: CGFloat = 5.0
+        let alcoholPercentageOfWine: CGFloat = 0.13
         let ouncesOfAlcoholPerWineGlass = ouncesInOneWineGlass * alcoholPercentageOfWine
         let numberOfWineGlassesForEquivalentAlcoholAmount = ouncesOfAlcoholTotal / ouncesOfAlcoholPerWineGlass
         
@@ -97,7 +97,7 @@ class ViewController: UIViewController {
         }
         
         //generate result text, display it on label
-        let resultText = "\(numberOfBeers) \(beerText) (with \((self.beerPercentTextField.text! as NSString).floatValue)% alcohol) contains as much alcohol as \(numberOfWineGlassesForEquivalentAlcoholAmount) \(wineText) of wine"
+        let resultText = "\(Int(numberOfBeers)) \(beerText) (with \((self.beerPercentTextField.text! as NSString).floatValue))% alcohol) contains as much alcohol as \(Int(numberOfWineGlassesForEquivalentAlcoholAmount)) \(wineText) of wine"
         self.resultLabel.text = resultText
     }
     
